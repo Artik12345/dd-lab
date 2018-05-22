@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+    <header>
+        <div class="container">
+          <div class="header_left_block col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <img id="self_avatar">
+              <p id="self_username"></p>
+          </div>
+          <div class="header_right_block col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <p id="self_media_number"></p>
+          </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content_main_block"></div>
+        <div id="load_more_btn">Загрузить еще</div>
+    </div>
+    
+      
+
+
+
+    <script type="text/template" id="template_content">
+        <div class="content_block">
+          <div class="img_block">
+              <img class="content_img">
+          </div>
+          <div class="content_description"></div>
+          <div class="tags_block"></div>
+          <div class="likes_and_comments_block">
+            <img src="img/like.png">
+            <span class="likes_count"></span>
+            <img src="img/comment.png">
+            <span class="comments_count"></span>
+            <span class="creation_time"></span>
+          </div>
+        </div>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
