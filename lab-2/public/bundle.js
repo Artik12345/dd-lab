@@ -840,7 +840,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactDom.render)(_react2.default.createElement(
     'div',
     null,
-    'PRIVET PIDOR'
+    'PRIVET REACT'
 ), document.getElementById('root'));
 
 /***/ }),
