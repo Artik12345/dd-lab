@@ -1,0 +1,1 @@
+webpackJsonp([1],{12:function(e,t,n){"use strict";var a,c=n(5),d=(a=c)&&a.__esModule?a:{default:a},o=n(16);n(25),(0,o.render)(d.default.createElement("div",{className:"test"},"PRIVET REACT"),document.getElementById("root"))},25:function(e,t){}},[12]);

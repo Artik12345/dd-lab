@@ -5,20 +5,11 @@ module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ['env', 'stage-2']
-                    }
-                },
-                exclude: /node_modules/
-            }
+            
         ]
     },
     plugins: [
