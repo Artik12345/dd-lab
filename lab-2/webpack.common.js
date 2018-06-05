@@ -1,4 +1,3 @@
-
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -18,17 +17,13 @@ module.exports = {
                         presets: ['env', 'stage-2']
                     }
                 },
-                exclude: /node_modules/,
-                
+                exclude: /node_modules/
             }
         ]
-      },
-      plugins: [
-          new HtmlWebpackPlugin({
-              template: path.join(__dirname, 'src', 'index.html')
-          })
-      ],
-      devServer: {
-          stats: 'errors-only'
-      }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src', 'index.html')
+        })
+    ],
 }
