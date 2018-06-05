@@ -1,10 +1,9 @@
 import React from 'react'
 import {render} from 'react-dom'
-import './scss/test.scss'
+import App from './components/App'
+// import './scss/test.scss'
 
 render(
-    <div className="test">
-        PRIVET REACT
-    </div>,
+    <App />,
     document.getElementById('root')
 )
