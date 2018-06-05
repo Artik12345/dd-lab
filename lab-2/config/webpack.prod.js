@@ -23,7 +23,7 @@ module.exports = merge(commonConfig, {
             },
             {
                 test: /\.s?css$/,
-                include: path.join(__dirname, 'src'),
+                include: path.join(__dirname, '../src'),
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [

@@ -21,7 +21,7 @@ module.exports = merge(commonConfig, {
             },
             {
                 test: /\.s?css$/,
-                include: path.join(__dirname, 'src'),
+                include: path.join(__dirname, '../src'),
                 use: [
                     'style-loader',
                     'css-loader',
