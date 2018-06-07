@@ -17,7 +17,6 @@ export default class App extends Component {
             data: users,
             active: null
         }
-        console.log(this.state.data[0])
     }
 
     updateData = (new_data) => {
