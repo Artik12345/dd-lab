@@ -7,17 +7,20 @@ export class Api {
     })
   }
 
-  // Наши методы для обращения к api
-  // Пример get запроса
-  getPhotos () {
+  getEvents () {
     return this.instance.request({
       type: 'get',
-      url: 'list'
+      url: 'events'
     })
   }
 
-  // Метод для регистрации класса в прототипе Vue
-  // После чего экземпляр будет доступен в любом компоненте через this.api
+  getEventTypes () {
+    return this.instance.request({
+      type: 'get',
+      url: 'event-types'
+    })
+  }
+
   install (Vue) {
     Vue.prototype.api = this
   }

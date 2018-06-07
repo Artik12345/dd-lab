@@ -1,34 +1,53 @@
 <template>
   <div id="app">
-    <div class="header">Тут колличество сегодняшних событий</div>
+    <div class="header">Сегодня {{todayEvents.length}} мероприятий</div>
     <div class="main">
       <div class="navigation-block">
         <p>Актуальные</p>
         <p>Все мероприятия</p>
       </div>
-      <router-view/>
+      <router-view :dataToday='todayEvents' :dataTomorrow='tomorrowEvents'/>
     </div>
   </div>
 </template>
 
+
+
 <script>
 export default {
   name: 'App',
-  data : function() {
+  data: function () {
     return {
-      
+      allEvents: null,
+      todayEvents: null,
+      tomorrowEvents: null
     }
   },
   created () {
-    // Пример вызова api метода из компонента
-    this.api.getPhotos()
+    this.api.getEvents()
       .then(({ data }) => {
-        console.log('Fetched data from API:')
+        // console.log('ALL EVENTS:')
         console.log(data)
+        this.allEvents = data
+
+        let today = new Date()
+        
+        this.todayEvents = data.filter((ev) => {
+          let evDate = new Date(ev.event.date)
+          return evDate.getDate() === today.getDate()
+        })
+
+        this.tomorrowEvents = data.filter((ev) => {
+          let evDate = new Date(ev.event.date)
+          return evDate.getDate() === (today.getDate() + 1)
+        })
       })
-  }
+  },
+
 }
 </script>
+
+
 
 <style>
 body, p {margin: 0;}
@@ -45,8 +64,9 @@ body, p {margin: 0;}
   line-height: 50px;
 }
 .main {
-  padding: 40px 0;
-  background: rgb(185, 224, 228);
+  box-sizing: border-box;
+  padding: 40px 15px;
+  background: #e5f2f5;
   height: auto;
   width: 100%;
   display: flex;
@@ -56,8 +76,8 @@ body, p {margin: 0;}
 }
 
 .navigation-block {
-  padding: 15px;
-  width: 240px;
+  padding: 15px 0;
+  min-width: 170px;
   height: inherit;
   flex: 0 1 auto;
 }
