@@ -26,8 +26,6 @@ export default {
   created () {
     this.api.getEvents()
       .then(({ data }) => {
-        // console.log('ALL EVENTS:')
-        console.log(data)
         this.allEvents = data
 
         let today = new Date()

@@ -33,9 +33,7 @@ export default {
   },
   computed: {
     getTime () {
-      console.log(this.data)
       if (this.data !== null) {
-        console.log(this.data[1].event.time)
         return this.data[1].event.time
       }
     }
